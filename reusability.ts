@@ -1,4 +1,9 @@
 /*
+Source: 
+FreeCodeCamp -
+How to Write Clean Code – Tips and Best Practices (Full Handbook).pdf
+by Germán Cocca
+
 REUSABILITY
 ability of code to be used multiple times without modification.
 */
