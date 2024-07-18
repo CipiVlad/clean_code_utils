@@ -42,6 +42,91 @@ a {
     text-decoration: none;
 }
 
+.menuOverlayLinks {
+    display: none;
+}
+
+.menuOverlayLinks li {
+    display: none;
+}
+
+/* grid */
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    margin: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+main h2 {
+    text-align: center;
+    margin: 4rem;
+}
+
+.grid-card {
+    background-image: url('https://picsum.photos/200');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+/* odd even section */
+
+.odd-even {
+    background-color: aqua;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.odd {
+    background-image: url('https://images.unsplash.com/photo-1642942552682-c9721be3d0cc?q=80&w=1605&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.even {
+    background-image: url('https://images.unsplash.com/photo-1642942552682-c9721be3d0cc?q=80&w=1605&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+
+
+/* media queries */
+
 
 @media screen and (max-width: 768px) {
 
@@ -49,8 +134,20 @@ a {
         display: none;
     }
 
+    .overlay {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: yellow;
+        transition: 1s;
+        z-index: 1;
+
+
+    }
+
     nav .menu-container {
         cursor: pointer;
+        z-index: 2;
     }
 
     .logo {
@@ -78,4 +175,6 @@ a {
     .change .bar3 {
         transform: translate(0, -11px) rotate(45deg);
     }
+
+
 }
