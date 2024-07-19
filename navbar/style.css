@@ -122,12 +122,186 @@ main h2 {
     border-radius: 5px;
 }
 
+/* hero section with overlay */
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1676007957159-8f84bf868cd2?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+}
+
+/* text wrap with side image */
+.text-wrap {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 5rem;
+}
+
+.side-image {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 40%;
+    height: auto;
+}
 
 
+.compolex-grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'nav main aside'
+        'footer footer footer';
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr 200px;
+    height: 100vh;
+}
+
+.complex-header {
+    grid-area: header;
+    background: #3c3c3c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.complex-nav {
+    grid-area: nav;
+    background: #6f6f6f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.complex-main {
+    grid-area: main;
+    background: #bfbfbf;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.complex-aside {
+    grid-area: aside;
+    background: #d9d9d9;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.complex-footer {
+    grid-area: footer;
+    background: #3c3c3c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* unequal grid */
+
+.unequal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    background: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.item1 {
+    grid-column: span 2;
+}
+
+.item3 {
+    grid-row: span 2;
+}
+
+.item5 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* buttons section */
+
+.button-section {
+    margin: 5rem;
+}
+
+.buttons-grid {
+    display: grid;
+    place-items: center;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.button-section button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-section button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+
+.btn-3d {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-3d:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #f94d6a, #ff927c);
+    background-size: 200% 200%;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-position 0.5s, transform 0.3s;
+}
+
+.btn-gradient:hover {
+    background-position: 100% 0;
+    transform: scale(1.1);
+}
 
 /* media queries */
-
-
 @media screen and (max-width: 768px) {
 
     #navLinks {
@@ -176,5 +350,33 @@ main h2 {
         transform: translate(0, -11px) rotate(45deg);
     }
 
+    /* odd even section */
 
+    .flex {
+        flex-direction: column;
+    }
+
+    /* hero section with overlay */
+    .hero-section {
+        height: 50vh;
+    }
+
+    /* text wrap with side image */
+    .side-image {
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+        max-width: 100%;
+    }
+
+    .compolex-grid-container {
+        grid-template-areas:
+            'header'
+            'nav'
+            'main'
+            'aside'
+            'footer';
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-columns: 1fr;
+    }
 }
